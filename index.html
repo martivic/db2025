@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base target="_top" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+
+    <nav class="navbar navbar-light bg-primary">
+      <a class="navbar-brand">
+        <img src="https://icon-library.com/images/search-icon-jpg/search-icon-jpg-3.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        SEARCH FOR OFFER CODE
+      </a>
+      <img src="https://cdn-icons-png.flaticon.com/512/2345/2345511.png" width="30" height="30" class="d-inline-block align-top ml-auto" alt="">
+    </nav>
+    
+
+
+
+
+    <!-- Hero Section -->
+
+    <div class="search-container">
+      <img src="" class="logo" alt="Logo">
+      <h2>Enter Search Criteria</h2>
+      <input type="text" id="id" class="form-control" placeholder="OFFER CODE (Optional)">
+      <br>
+      <input type="text" id="phone" class="form-control" placeholder="PHONE NUMBER">
+      <div id="phone-required-msg" style="display: none; color: red;">Phone number required</div>
+      <br>
+      <!-- New Input Fields -->
+      <input type="text" id="address" class="form-control" placeholder="ADDRESS (Optional)">
+      <br>
+      <input type="text" id="city" class="form-control" placeholder="CITY (Optional)">
+      <br>
+      <input type="text" id="zipcode" class="form-control" placeholder="ZIPCODE (Optional)">
+      <br>
+      <!-- Assigned User Dropdown -->
+      <select id="assignedUser" class="form-control">
+        <option value="">Select Assigned User</option>
+        <option value="William  ">William Koumparis</option>
+        <option value="Taylor  ">Taylor Olbrantz</option>
+        <option value="Mike  ">Mike Rou</option>
+      </select>
+      <br>
+      <button id="submitID" type="button" class="btn btn-primary" >
+        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+        Search
+      </button>
+    </div>
+    <div id="result">
+
+      <form id="data-form" style="display: none;">
+        <h3>Your Details</h3>
+        <label for="name">Name</label>
+        <input type="text" id="name" disabled />
+        
+         <label for="phone-number">Phone Number</label>
+        <input type="text" id="phone-number" disabled />
+       
+       
+      <label for="address">Address</label>
+      <input type="text" id="address" disabled />
+      
+  
+        <label for="city">City</label>
+        <input type="text" id="city" disabled />
+      
+        <label for="zipcode">Zip Code</label>
+        <input type="text" id="zipcode" disabled />
+      
+        <label for="loan1amt">Loan Amount</label>
+        <input type="text" id="loan1amt" disabled /> 
+
+        <label for="statename">State</label>
+        <input type="text" id="statename" disabled /> 
+
+        <label for="countryname">County</label>
+        <input type="text" id="countryname" disabled /> 
+
+        <label for="loan1lender">Loan Lender</label>
+        <input type="text" id="loan1lender" disabled /> 
+
+        <label for="assigneduser">Assigned User</label>
+        <input type="text" id="assigneduser" disabled /> 
+
+      </form>
+
+    </div>
+
+    <!-- Modal
+<div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" id="modalHeader">
+        <button type="button" id="close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body-content">
+      </div>
+      <div class="modal-footer" id="modalFooter">
+        <button id="print-button-modal" class="btn btn-secondary" onclick="window.open('https://app.jabrr.com/v ......l', '_blank');">Find Contact</button>
+        <button id="close-button-modal" type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+      
+    <!-- Footer -->
+    <div class="footer">
+      <p>@2024 Direct My Loan. All rights reserved.</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    
+    <script src="script3.js"></script>
+</body>
+</html>
